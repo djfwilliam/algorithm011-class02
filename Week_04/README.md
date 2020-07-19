@@ -10,8 +10,8 @@
 
 ## 1.1 深度优先搜索 ##
 ### 模版代码：###
-递归写法
-- 
+- 递归写法
+
 ```void dfs(Node node, List<Node> visited) {
     if (visited.contains(node)) {
         // 已经访问过
@@ -31,8 +31,8 @@
     }
 }```
 
-非递归写法
-- 
+- 非递归写法
+
 ```
 void dfs(Node tree) {
     if (tree.root == null) {
@@ -62,8 +62,8 @@ void dfs(Node tree) {
 ## 1.2 广度优先 ##
 由于使用的是队列方式实现，所以没有递归的方法。  
 
-模版代码：
-- 
+- 模版代码：
+
 ```
 void bfs(Node graph) {
   if (graph.start == null) {
@@ -101,14 +101,14 @@ void bfs(Node graph) {
 对于贪心算法的题目，可以转化成多种形式，既可以从前向后贪心，也可以从后向前贪心。
 
 # 3 二分查找 #
-二分查找的前提：
-- 
+- 二分查找的前提：
+
 1. 目标函数单调性  
 2. 存在上下界  
 3. 能够通过索引访问
 
-模版代码：
-- 
+- 模版代码：
+
 ```
 int binarySearch(int[] nums, int target) {
   int left = 0;
@@ -124,11 +124,12 @@ int binarySearch(int[] nums, int target) {
     }
   }
   return -1;
-}
-```
+}```
+
 # 4 作业 #
 使用二分查找，寻找一个半有序数组中间无序的地方，如输入[4, 5, 6, 7, 0, 1, 2]，输出4  
-相似题目：[链接](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/)  
+相似题目：[链接](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/)   
+
 ```
 public int search(int[] nums) {
     int left = 0;
@@ -143,5 +144,4 @@ public int search(int[] nums) {
     }
     return left;
 }
-
 ```
