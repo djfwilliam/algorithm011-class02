@@ -10,9 +10,10 @@
 
 ## 1.1 深度优先搜索 ##
 ### 模版代码：###
-- 递归写法
+- 递归写法  
 
-```void dfs(Node node, List<Node> visited) {
+```
+void dfs(Node node, List<Node> visited) {
     if (visited.contains(node)) {
         // 已经访问过
         return;
@@ -59,6 +60,7 @@ void dfs(Node tree) {
 }
 
 ```
+
 ## 1.2 广度优先 ##
 由于使用的是队列方式实现，所以没有递归的方法。  
 
@@ -91,6 +93,7 @@ void bfs(Node graph) {
 }
 
 ```
+
 # 2 贪心算法 #
 在每一步选择中都采取当前状态下最优的选择，但不一定能得到全局最优解。
 
@@ -110,7 +113,7 @@ void bfs(Node graph) {
 - 模版代码：
 
 ```
-int binarySearch(int[] nums, int target) {
+public int binarySearch(int[] nums, int target) {
   int left = 0;
   int right = nums.length - 1;
   while (left <= right) {
@@ -124,13 +127,15 @@ int binarySearch(int[] nums, int target) {
     }
   }
   return -1;
-}```
+}
 
+```
 # 4 作业 #
 使用二分查找，寻找一个半有序数组中间无序的地方，如输入[4, 5, 6, 7, 0, 1, 2]，输出4  
 相似题目：[链接](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/)   
 
 ```
+
 public int search(int[] nums) {
     int left = 0;
     int right = nums.length - 1;
@@ -144,4 +149,5 @@ public int search(int[] nums) {
     }
     return left;
 }
+
 ```
